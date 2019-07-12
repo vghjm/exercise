@@ -1,0 +1,94 @@
+@charset "utf-8";
+@import "reset.css";
+
+/* tooltip.css - 툴팁 디자인 스타일, 2012 © yamoo9.com
+---------------------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+/* ///////////////////////////////////////// 
+	=기본 스타일
+///////////////////////////////////////// */	
+body {
+	padding: 150px;
+	background: #252525 url(../images/bg_tile.jpg);
+}
+
+h1 {
+	margin-bottom: 40px;
+	font-family: 'Lato', Sans-Serief;
+	color: #fff;
+}
+
+/* ///////////////////////////////////////// 
+	=.gallery-nav
+///////////////////////////////////////// */	
+.gallery-nav li {
+	float: left;
+	margin-right: 100px;
+}
+
+
+/* ///////////////////////////////////////// 
+	=.tooltip
+///////////////////////////////////////// */	
+a.tooltip {
+	display: block;
+	width: 100px;
+	height: 100px;
+	border: 5px solid #4b4b4b;
+	background: #fff no-repeat center;
+	background-size: cover;
+	border-radius: 55px;
+	position: relative;
+}
+a.tooltip .tooltip-box {
+	opacity: 0;
+	width: 20em;
+	padding: .8em;
+	background: #111;
+	position: absolute;
+	bottom: 100px;
+	left: 50%;
+	margin-left: -10.4em;
+	border-radius: 15px 0px;
+	transition: all .4s ease-in .3s;
+}
+a.tooltip .tooltip-box::before {
+	content: '';
+	position: absolute;
+	bottom: -10px;
+	left: 120px;
+	border-top: 10px solid #111;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+}
+a.tooltip .tooltip-title {
+	color: #fff;
+}
+a.tooltip .tooltip-desc {
+	margin-bottom: 0;
+	font-size: 11px;
+	text-align: justify;
+	color: #bcbcbc;
+}
+a.tooltip.photo1 {
+	background-image: url(../images/sussjini-bbo.jpg);
+}
+a.tooltip.photo2 {
+	background-image: url(../images/khk-artwork.png);
+}
+a.tooltip.photo3 {
+	background-image: url(../images/interview-yamoo9.png);
+}
+a.tooltip:hover .tooltip-box, 
+a.tooltip:focus .tooltip-box {
+	opacity: 1;
+	bottom: 90px;
+}
+a.tooltip:hover,
+a.tooltip:focus {
+	border-color: #fff;
+}
+/* ///////////////////////////////////////// 
+	=Global Classes
+///////////////////////////////////////// */
